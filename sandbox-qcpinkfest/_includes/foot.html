@@ -1,0 +1,40 @@
+<script type="text/javascript" src="{{ site.baseurl }}/js/jquery.min.js"></script>
+<script type="text/javascript" src="{{ site.baseurl }}/js/bootstrap.min.js"></script>
+<!--script type="text/javascript" src="{{ site.baseurl }}/js/smoothscroll.js"></script-->
+
+{% if page.animate == true %}
+<!--script src="{{ site.baseurl }}/js/wow.min.js"></script>
+<script>new WOW().init();</script-->
+{% endif %}
+
+{% if page.slick == true %}
+<script type="text/javascript" src="{{ site.baseurl }}/js/slick.min.js"></script>
+<script>
+  $(document).ready(function(){
+
+    {% if page.id == "home" %}
+    $('.slick-jumbotron').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      dots: false,
+      arrows: false,
+      autoplay: true,
+      autoplaySpeed: 8000,
+      pauseOnHover: false,
+      infinite: true,
+      speed: 500,
+      fade: true,
+      cssEase: 'linear',
+    });
+
+    // put hover script here
+
+    {% endif %}
+
+  });
+</script>
+{% endif %}
+
+{% if page.id == "tickets" %}
+<script type="text/javascript" src="{{ site.baseurl }}/js/addfilm.js"></script>
+{% endif %}

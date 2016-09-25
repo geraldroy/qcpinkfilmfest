@@ -1,0 +1,56 @@
+---
+layout: main
+id: "home"
+title: "Home"
+header: "Home"
+
+slick: true
+
+panelsJumbotron:
+ - id: "main"
+   name: "Main"
+   text: ""
+   image: "filler-640x480-1.jpg"
+   url: ""
+ - id: "program"
+   name: "Program"
+   text: ""
+   image: "filler-640x480-2.jpg"
+   url: ""
+ - id: "film"
+   name: "Film"
+   text: ""
+   image: "filler-640x480-1.jpg"
+   url: ""
+ - id: "news"
+   name: "News"
+   text: ""
+   image: "filler-640x480-2.jpg"
+   url: ""
+
+---
+
+<section id="section-jumbotron" style="margin-top:-180px;margin-bottom:-100px;">
+
+  <div class="slick-jumbotron">
+
+    {% for eachpanel in page.panelsJumbotron %}
+    <div class="slick-jumbotron-panel" style="background-image:url('{{ site.baseurl }}/images/{{ eachpanel.image }}')">
+      <div class="container-fluid">
+        <div class="row row-limit" style="">
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <div class="slick-jumbotron-panel-text">
+              <h1>
+                <small>Lorem Ipsum</small>
+                {{ eachpanel.name }}
+              </h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+
+  </div>
+
+</section>
